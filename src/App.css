@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+
+.Logo {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.Welcome {
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* Tootlip Css  */
+ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: transparent;
+    padding: 6px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    color: #4d4d4d;
+    background-color: #ffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: autp;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  .example-2 .icon-content a[data-social="spotify"] .filled,
+  .example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
+    background-color: #1db954;
+  }
+  .example-2 .icon-content a[data-social="pinterest"] .filled,
+  .example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+    background-color: #bd081c;
+  }
+  .example-2 .icon-content a[data-social="dribbble"] .filled,
+  .example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
+    background-color: #0088cc;
+  }
+  
+
+
+
+
+
+/* Button Search Css  */
+.searchBox {
+  display: flex;
+  max-width: 230px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #2f3640;
+  border-radius: 50px;
+  position: relative;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(0deg, #2AF598 0%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+/*hover effect*/
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  transform: translateY(-3px);
+}
+/*button pressing effect*/
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 10px 16px 14px 16px;
+}
+
+
+
+
+/* Card Css  */
+.card {
+  width: 300px;
+  height: 200px;
+  background: #243137;
+  position: relative;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+#logo-main, #logo-second {
+  height: 100%;
+}
+
+#logo-main {
+  fill: #bd9f67;
+}
+
+#logo-second {
+  padding-bottom: 10px;
+  fill: none;
+  stroke: #bd9f67;
+  stroke-width: 1px;
+}
+
+.border {
+  position: absolute;
+  inset: 0px;
+  border: 2px solid #bd9f67;
+  opacity: 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.bottom-text {
+  position: absolute;
+  left: 50%;
+  bottom: 13px;
+  transform: translateX(-50%);
+  font-size: 6px;
+  text-transform: uppercase;
+  padding: 0px 5px 0px 8px;
+  color: #bd9f67;
+  background: #243137;
+  opacity: 0;
+  letter-spacing: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
+.content {
+  transition: all 0.5s ease-in-out;
+}
+
+.content .logo {
+  height: 35px;
+  position: relative;
+  width: 33px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.content .logo .logo1 {
+  height: 33px;
+  position: absolute;
+  left: 0;
+}
+
+.content .logo .logo2 {
+  height: 33px;
+  position: absolute;
+  left: 33px;
+}
+
+.content .logo .trail {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.content .logo-bottom-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  color: #bd9f67;
+  padding-left: 8px;
+  font-size: 11px;
+  opacity: 0;
+  letter-spacing: none;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.card:hover {
+  border-radius: 0;
+  transform: scale(1.1);
+}
+
+.card:hover .logo {
+  width: 134px;
+  animation: opacity 1s ease-in-out;
+}
+
+.card:hover .border {
+  inset: 15px;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.card:hover .bottom-text {
+  letter-spacing: 3px;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.card:hover .content .logo-bottom-text {
+  opacity: 1;
+  letter-spacing: 9.5px;
+}
+
+.card:hover .trail {
+  animation: trail 1s ease-in-out;
+}
+
+@keyframes opacity {
+  0% {
+    border-right: 1px solid transparent;
+  }
+
+  10% {
+    border-right: 1px solid #bd9f67;
+  }
+
+  80% {
+    border-right: 1px solid #bd9f67;
+  }
+
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+
+@keyframes trail {
+  0% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+    opacity: 0;
+  }
+
+  30% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+    opacity: 1;
+  }
+
+  70% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+    opacity: 1;
+  }
+
+  95% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+/* Button information Css  */
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color:white;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: white;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #6E704A;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+
+.Glav{
+  background-image: url("src/assets/images/creative-trucker-hat-still-life.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Footer{
+  background-image: url("src/assets/images/canvas-sneakers-green-model-tying-shoelaces-apparel-ad.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Login{
+  background-image: url("src/assets/images/Tree.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+.buttonSh {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.buttonSh:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(20, 4, 77);
+  align-items: center;
+}
+
+.buttonSh:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.buttonSh::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.buttonSh:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+
+
+
+
